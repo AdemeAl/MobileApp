@@ -4,7 +4,7 @@ tabs.forEach(tab => tab.addEventListener("click", tabsAnimation))
 
 const tabContents = [...document.querySelectorAll(".tab-content")]
 
-function tabsAnimation(e){
+function tabsAnimation(e) {
 
   const indexToRemove = tabs.findIndex(tab => tab.classList.contains("active-tab"))
 
@@ -24,22 +24,22 @@ function tabsAnimation(e){
 tabs.forEach(tab => tab.addEventListener("keydown", arrowNavigation))
 
 let tabFocus = 0;
-function arrowNavigation(e){
+function arrowNavigation(e) {
 
-  if(e.keyCode === 39 || e.keyCode === 37) {
+  if (e.keyCode === 39 || e.keyCode === 37) {
     tabs[tabFocus].setAttribute("tabindex", -1)
 
-    if(e.keyCode === 39) {
+    if (e.keyCode === 39) {
       tabFocus++;
 
-      if(tabFocus >= tabs.length) {
+      if (tabFocus >= tabs.length) {
         tabFocus = 0;
       }
     } else if (e.keyCode === 37) {
       tabFocus--;
 
-      if(tabFocus < 0) {
-        tabFocus = tabs.length -1;
+      if (tabFocus < 0) {
+        tabFocus = tabs.length - 1;
       }
     }
 
@@ -53,65 +53,50 @@ function arrowNavigation(e){
 
 // SLIDER
 
-const slider = document.querySelector('.image-slider');
-const arrowRight = document.querySelector('.arrow-right');
-const arrowleft = document.querySelector('.arrow-left');
-const heading = document.querySelector('.caption h1');
-const description = document.querySelector('.caption p');
+const items = document.querySelectorAll('.image-slider img');
+const nbSlide = items.length;
+const suivant = document.querySelector('.right');
+const precedent = document.querySelector('.left');
+let count = 0;
 
-// data for slider
+function slideSuivante() {
+  items[count].classList.remove('active');
 
-const images = ["assets/affiche/one-piece-film.webp", "assets/affiche/stranger.webp", "assets/affiche/Cobra_Kai.webp"];
+  if (count < nbSlide - 1) {
+    count++;
+  } else {
+    count = 0;
+  }
 
-const descriptions = [
-  "One Piece le film", "La derniere saison de Strangers things" , "Cobra Kai , toujours plus fort"
-];
+  items[count].classList.add('active')
+  console.log(count);
 
-const headings = [
-  "One Piece", "Cobra Kai" , "strangers Things"
-];
-
-
-// slider id
-
-let id = 0;
-
-
-// Slider Function
-
-function slide(id) {
-  slider.getElementsByClassName.backgroundImage = `url(assets/affiche/${images[id]})`;
-
-  // add image fade
-  slider.classList.add('image-fade');
-
-  // remove animation after is done so it can be used again
-  setTimeout(() => {
-    slider.classList.remove('image-fade');
-  }, 550);
-
-  // changing heading
-
-  
 }
+suivant.addEventListener('click', slideSuivante)
 
-arrowleft.addEventListener('click', () => {
-  id--;
 
-  if(id < 0){
-    id = images.length -1;
+function slidePrecedente() {
+  items[count].classList.remove('active');
+
+  if (count > 0) {
+    count--;
+  } else {
+    count = nbSlide - 1;
   }
 
-  slide(id);
-});
+  items[count].classList.add('active')
+  // console.log(count);
 
+}
+precedent.addEventListener('click', slidePrecedente)
 
-arrowRight.addEventListener('click', () => {
-  id++;
+function keyPress(e) {
+  console.log(e);
 
-  if(id > images.length - 1){
-    id = 0;
+  if (e.keyCode === 37) {
+    slidePrecedente();
+  } else if (e.keyCode === 39) {
+    slideSuivante();
   }
-
-  slide(id);
-});
+}
+document.addEventListener('keydown', keyPress)

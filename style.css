@@ -7,22 +7,25 @@
 
 /* Page Propriety */
 
-body{
+body {
     background: #16161a;
     max-width: 100%;
     overflow-x: hidden;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.image-box img{
+.image-box img {
     border-radius: 3px;
 }
 
+.image-box img:hover{
+    transform: scale(1.05);
+}
 
 
 
@@ -37,32 +40,49 @@ body{
 
 /* Slider */
 
-.image-slider{
+.image-slider {
     height: 100%;
-    
-    
+
+
     background: #000;
     background-image: url(assets/affiche/one-piece-film.png);
-    
+
     background-position: center;
     background-size: cover;
     transition: 0.3s;
 }
 
-section{
+.image-slider img {
     height: 100%;
+    width: 100%;
     
-    
+    object-fit:cover;
+}
+
+.image-slider img {
+    max-width: 100%;
+    display: none;
+}
+
+.image-slider img.active {
+    display: block;
+    animation: fade 0.8s;
+}
+
+section {
+    height: 100%;
+
+
     transition: 0.3s;
 }
 
-.image-slider *{
+.image-slider * {
     box-sizing: border-box;
 
 }
 
-.caption{
-    background: linear-gradient(rgba(0,0,0,0)#000);
+.caption {
+    background: linear-gradient(rgba(0, 0, 0, 0)#000);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -71,12 +91,13 @@ section{
     text-align: center;
 }
 
-.caption h4{
+.caption h4 {
     margin: 0;
     color: #fff;
 }
 
-.arrow-left, .arrow-right{
+.arrow-left,
+.arrow-right {
     background: #fff;
     position: absolute;
     top: 40%;
@@ -90,29 +111,31 @@ section{
     transition: 0.3s;
 }
 
-.arrow-left:hover, .arrow-right:hover{
+.arrow-left:hover,
+.arrow-right:hover {
     background: #000;
     color: #fff;
 
 }
 
-.arrow-left{
+.arrow-left {
     left: 1em;
 }
 
-.arrow-right{
+.arrow-right {
     right: 1em;
 }
 
-.image-fade{
+.image-fade {
     animation: imgFade 0.5s ease-in-out;
 }
 
 @keyframes imgFade {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
@@ -121,11 +144,12 @@ section{
 
 /* Header */
 
-header h1{
-    font-family: 'Outfit',Arial, Helvetica, sans-serif;
+header h1 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
 }
-header{
-    
+
+header {
+
     background: #fffffe;
     color: #010101;
     display: flex;
@@ -137,7 +161,7 @@ header{
     position: fixed;
 }
 
-header{
+header {
     font-size: 20px;
 }
 
@@ -154,7 +178,7 @@ header{
 
 
 
-.slider{
+.slider {
     background: #fff;
     width: 100%;
     height: 400px;
@@ -170,104 +194,111 @@ header{
 
 /* New Releases */
 
-.new-release{
+.new-release {
     margin-top: 15px;
 }
-.new-release h3{
+
+.new-release h3 {
     color: white;
-    font-family:  'Poppins', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     margin-left: 25px;
     font-weight: 300;
 }
+
 .new-release .new {
     max-height: 200px;
     margin: 10px 10px 10px 10px;
     overflow-x: auto;
     display: flex;
-    
-    
+
+
 }
 
 
-.new .image-box{
+.new .image-box {
     margin: 0 10px;
-    
+
 
 }
-.image-box img{
+
+.image-box img {
     height: 150px;
     width: 250px;
 }
-  
-.new::-webkit-scrollbar{
+
+.new::-webkit-scrollbar {
     width: 0;
 }
-  
+
 
 
 
 /* Our Anime */
 
-.top .top-anime{
+.top .top-anime {
     max-height: 300px;
     margin: 10px 10px 10px 10px;
     overflow-x: auto;
     display: flex;
 }
-.top h3{
+
+.top h3 {
     color: white;
-    font-family:  'Poppins', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     margin-left: 25px;
     font-weight: 300;
 }
 
-.top-anime .image-box{
+.top-anime .image-box {
     margin: 0 10px;
 }
 
-.top-anime .image-box img{
+.top-anime .image-box img {
     height: 220px;
     width: 150px;
     object-fit: cover;
 }
 
-.top-anime::-webkit-scrollbar{
+.top-anime::-webkit-scrollbar {
     width: 0;
 }
-  
+
 /* Tabs */
 
-.tabs-bar{
+.tabs-bar {
     padding: 0 15%;
-    
+
 }
+
 .tabs {
     background-color: transparent;
     max-width: 100%;
-    
+
     margin: 10px auto 0;
     border-radius: 10px;
     margin-bottom: 50px;
     color: #b7b2b2;
     display: grid;
     grid-template-rows: min-content 1fr;
-    
 
-  }
-  .tabs-btn-container {
+
+}
+
+.tabs-btn-container {
     display: flex;
-    
-  }
 
-  .tabs-btn-container{
+}
+
+.tabs-btn-container {
     width: 300px;
     display: flex;
     justify-content: center;
-    
-  }
-  .tab {
+
+}
+
+.tab {
     border: none;
     margin-left: 20%;
     background: transparent;
@@ -281,15 +312,17 @@ header{
     font-weight: 700;
     padding: 20px 0;
     cursor: pointer;
-  }
-  
-  .tab:nth-child(1) {
+}
+
+.tab:nth-child(1) {
     border-bottom-left-radius: 3px;
-  }
-  .tab:nth-child(3) {
+}
+
+.tab:nth-child(3) {
     border-top-right-radius: 9px;
-  }
-  .tab-content {
+}
+
+.tab-content {
     grid-area: 2 / 1 / 3 / 2;
     padding: 10px 10% 10px 20%;
     min-height: 200px;
@@ -298,36 +331,39 @@ header{
     flex-wrap: wrap;
     visibility: hidden;
     transition: opacity 0.4s ease-out;
-  }
-  .tab-content .image-box{
-    
-    margin: 5px 5px;
-    
-  }
-  .tab-content h3 {
-    font-size: clamp(20px, 2vw, 25px);
-  }
+}
 
-  .tab-content .image-box img{
+.tab-content .image-box {
+
+    margin: 5px 5px;
+
+}
+
+.tab-content h3 {
+    font-size: clamp(20px, 2vw, 25px);
+}
+
+.tab-content .image-box img {
     height: 200px;
     width: 150px;
     border-radius: 3px;
-  }
+}
 
-  
-  
-  /* Animations tabs */
-  .active-tab {
-    
+
+
+/* Animations tabs */
+.active-tab {
+
     font-weight: bolder;
     border-bottom: 3px #b30808 solid;
     border-bottom-width: 5px;
     color: #fff
-  }
-  .active-tab-content {
+}
+
+.active-tab-content {
     visibility: visible;
     opacity: 1;
-  }
+}
 
 
 
@@ -335,42 +371,44 @@ header{
 
 
 
-  /* Popular part */
-.popular{
+/* Popular part */
+.popular {
     height: 600px;
 }
-.popular .top-films{
+
+.popular .top-films {
     max-height: 300px;
     margin: 10px 10px 10px 10px;
     overflow-x: auto;
     display: flex;
 }
-.popular h3{
+
+.popular h3 {
     color: white;
-    font-family:  'Poppins', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     margin-left: 25px;
     font-weight: 300;
 }
 
-.top-films .image-box{
+.top-films .image-box {
     margin: 0 10px;
     position: relative;
-    
+
 }
 
-.top-films .image-box img{
+.top-films .image-box img {
     height: 250px;
     width: 150px;
     object-fit: cover;
 }
 
-.top-films::-webkit-scrollbar{
+.top-films::-webkit-scrollbar {
     width: 0;
 }
-  
 
-.popular .top-films .image-box h6{
+
+.popular .top-films .image-box h6 {
     position: absolute;
     bottom: 20px;
     left: 10px;
@@ -382,46 +420,53 @@ header{
     font-weight: 500px;
     text-transform: capitalize;
 
-  }
+}
 
 /* Side Bar */
 
-.side-bar{
+.side-bar {
     bottom: 0;
     position: fixed;
     height: 8%;
     background: #000000;
     width: 100%;
-    
+
 }
 
-.side-bar .icons{
+.side-bar .icons {
     display: flex;
     align-items: center;
-    
-    padding: 10px 30px;
+
+    padding: 5px 30px;
     justify-content: center;
     font-size: 2em;
-    color: #72757e;
+    color: white;
+    text-decoration: none;
 }
 
-.side-bar .icons i{
+.side-bar .icons i {
     margin: 0 20px;
-    
+
 }
 
-.side-bar .icons .fa-house{
-    color:#010101;
+.side-bar .icons a {
+    text-decoration: none;
+    font-style: normal;
+    color: #fff;
+}
+
+.side-bar .icons .fa-house {
+    color: #010101;
     font-size: 35px;
     background: white;
     border-radius: 50%;
     padding: 10px;
-    
+
 }
 
-.side-bar .icons i:nth-child(3){
+.side-bar .icons i:nth-child(3) {
     margin: 0px 10px 0 15px;
-    
+
 }
 
 
@@ -432,10 +477,8 @@ header{
 
 
 
-@media screen and (min-width: 600px)
-{
-    .side-bar{
+@media screen and (min-width: 600px) {
+    .side-bar {
         visibility: hidden;
     }
 }
-
