@@ -16,12 +16,19 @@
 
 }
 
+
+header a{
+    text-decoration: none;
+    color: #000;
+}
 /* watch box */
 
-.film{
+.film iframe{
     width: 100%;
-    height: 400px;
-    background: rgb(66, 66, 66);
+    height: 340px;
+    padding: auto;
+    margin-top: 60px;
+
     
     
 }
@@ -47,6 +54,50 @@
 }
 
 .about-film h4{
+    font-size: 1.5em;
+    margin-left: 5%;
     font-family: 'Poppins',Arial, Helvetica, sans-serif;
     color: white;
+}
+
+
+/* Download */
+
+.download h3{
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    color: white;
+    
+}
+
+.download a{
+    text-decoration: none;
+}
+
+.download h3:hover{
+    background-color: #ffffff;
+    
+    
+    color: #000;
+}
+
+/* trailer */
+
+.trailer{
+    padding: 20px;
+}
+.trailer h3{
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.trailer iframe{
+    width: 100%;
+    
 }
