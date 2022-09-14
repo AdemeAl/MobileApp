@@ -9,13 +9,13 @@
     "description": "Application pour regarder des films et series",
     "icons": [
       {
-        "src": "/assets/adm.png",
+        "src": "/assets/favicon_io/android-chrome-192x192.png",
         "type": "image/png",
         "sizes": "192x192",
         "purpose": "any maskable"
       },
       {
-        "src": "/assets/adm.png",
+        "src": "/assets/favicon_io/android-chrome-512x512.png",
         "type": "image/png",
         "sizes": "512x512"
       }

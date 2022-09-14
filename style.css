@@ -39,11 +39,13 @@ body {
 
 
 /* Slider */
-
+.slider{
+    margin-top: 70px;
+}
 .image-slider {
     height: 100%;
     position: relative;
-
+    
     background: #000;
     background-image: url(assets/affiche/one-piece-film.png);
 
@@ -149,7 +151,7 @@ header h1 {
 }
 
 header {
-
+    top: 0;
     background: #fffffe;
     color: #010101;
     display: flex;
