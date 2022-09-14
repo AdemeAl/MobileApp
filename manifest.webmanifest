@@ -1,0 +1,23 @@
+{
+    "name": "ADM App",
+    "short_name": "ADM",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "crimson",
+    "theme_color": "crimson",
+    "orientation": "portrait-primary",
+    "description": "Application pour regarder des films et series",
+    "icons": [
+      {
+        "src": "assets/img/",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/img/logo512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
