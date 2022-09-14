@@ -9,13 +9,13 @@
     "description": "Application pour regarder des films et series",
     "icons": [
       {
-        "src": "assets/img/",
+        "src": "/assets/adm.png",
         "type": "image/png",
         "sizes": "192x192",
         "purpose": "any maskable"
       },
       {
-        "src": "/img/logo512.png",
+        "src": "/assets/adm.png",
         "type": "image/png",
         "sizes": "512x512"
       }
