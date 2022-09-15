@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel=" icon" href="assets/favicon.ico" type="image/x-icon"> 
+    <link rel=" icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="film-style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -12,13 +13,16 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Movie App</title>
 </head>
+
 <body>
     <header>
-        <a href="index.html"><h1>ADM</h1></a>
+        <a href="index.html">
+            <h1>ADM</h1>
+        </a>
         <i class="fa-solid fa-user"></i>
     </header>
 
-    
+
 
     <div class="film-infos">
         <span class="year">2022 |</span>
@@ -29,21 +33,25 @@
 
     <div class="about-episode">
         <h4>Casa de la Papel : Episode 1</h4>
-        <p>Le Professeur recrute Tokyo et sept autres criminels en vue d'un cambriolage grandiose ciblant la Maison Royale de la Monnaie d'Espagne.</p>
-        
+        <p>Le Professeur recrute Tokyo et sept autres criminels en vue d'un cambriolage grandiose ciblant la Maison
+            Royale de la Monnaie d'Espagne.</p>
+
     </div>
 
     <div class="film">
-        <IFRAME SRC="https://uqload.com/embed-l5a93r3xzvor.html" FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO  allowfullscreen></IFRAME>
+        <IFRAME SRC="https://uqload.com/embed-l5a93r3xzvor.html" FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO
+            allowfullscreen></IFRAME>
     </div>
 
-    
+
 
     <div class="download">
-        
-        <a href="https://uqload.com/l5a93r3xzvor.html"><h3>Download ⬇️</h3></a>
+
+        <a href="https://uqload.com/l5a93r3xzvor.html">
+            <h3>Download ⬇️</h3>
+        </a>
     </div>
-    
+
 
     <div class="similaires">
         <h4>Prochains Episodes</h4>
@@ -77,14 +85,46 @@
         </div>
     </div>
     <div class="side-bar">
-        <div class="icons">
-            <a href="index.html"><i class="fa-solid fa-house"></i></a>
-            <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <i class="fa-solid fa-rectangle-history"></i>
-            <i class="fa-solid fa-moon"></i>
-            <i class="fa-solid fa-bookmark"></i>
-        </div>
-
+        <ul>
+            <li class="list active">
+                <a href="index.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="search.html">
+                    <span class="icon">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </span>
+                    <span class="text"> Search </span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="moon-outline"></ion-icon>
+                    </span>
+                    <span class="text"> Dark Mode </span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                    </span>
+                    <span class="text"> WatchList </span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
     </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
