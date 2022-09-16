@@ -13,6 +13,22 @@ body {
     overflow-x: hidden;
 }
 
+body.active{
+    background: #fff;
+}
+
+body.active h3 {
+    color: black;
+}
+
+
+body.active .active-tab{
+    color: #000;
+}
+
+body.active .tab{
+    color: #000;
+}
 * {
     padding: 0;
     margin: 0;
@@ -372,7 +388,7 @@ header {
     font-weight: bolder;
     border-bottom: 3px #b30808 solid;
     border-bottom-width: 5px;
-    color: #fff
+    color: #fff;
 }
 
 .active-tab-content {
@@ -438,7 +454,9 @@ header {
 }
 
 /* Side Bar */
-
+.side-bar.active{
+    background: #000;
+}
 .side-bar {
     bottom: 0;
     position: fixed;

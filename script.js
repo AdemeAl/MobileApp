@@ -100,3 +100,18 @@ function keyPress(e) {
   }
 }
 document.addEventListener('keydown', keyPress)
+
+
+
+
+// Dark Mode
+
+function toogle() {
+  const trailer = document.querySelector('.body');
+  trailer.classList.add("active");
+  
+};
+
+function toogle1() {
+  
+}
