@@ -109,9 +109,25 @@ document.addEventListener('keydown', keyPress)
 function toogle() {
   const trailer = document.querySelector('.body');
   trailer.classList.add("active");
-  
+
 };
 
 function toogle1() {
-  
+
 }
+
+
+
+//  Next Slide scrool
+
+const arrows = document.querySelectorAll(".arrow-next");
+const list = document.querySelectorAll(".new");
+
+arrows.forEach((arrows, i) => {
+  arrows.addEventListener("click",() =>{
+    console.log('test');
+    list[i].style.transform = "translateX(-100px)"
+    list.style.overflow = "auto"
+  })
+
+})

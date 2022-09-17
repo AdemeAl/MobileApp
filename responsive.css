@@ -1,0 +1,147 @@
+
+
+
+
+
+/* nav bar */
+
+.nav-bar{
+    color: white;
+    top: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #010101;
+    display: flex;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    
+    position: fixed;
+}
+
+.nav-bar ul{
+    list-style: none;
+    
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 10px;
+}
+
+.nav-bar ul li{
+    
+    margin: 5px 10px;
+    
+
+}
+
+.nav-bar ul li:hover{
+    font-weight: bold;
+}
+
+
+
+
+/* Arrow next scroll */
+
+.new .arrow-next{
+    color: #fff;
+    position: absolute;
+    font-size: 5em;
+    right: 0;
+    top: 25px;
+    -webkit-box-shadow: 21px 28px 7px -1px rgba(0,0,0,0.71);
+    -moz-box-shadow: 21px 28px 7px -1px rgba(0,0,0,0.71);
+    box-shadow: 21px 28px 7px -1px rgba(0,0,0,0.71);
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: #010101;
+}
+
+@media screen and (max-width: 600px) {
+    .header{
+        visibility: hidden;
+    }
+    
+
+    .nav-bar h1{
+        font-size: 2.5em;
+    }
+    
+    .new{
+        position: relative;
+        
+    }
+
+    .slider img{
+        object-fit:inherit;
+    
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header{
+        visibility: visible;
+    }
+
+    .nav-bar{
+        visibility: hidden;
+    }
+
+    .slider img{
+        object-fit: cover;
+    
+    }
+
+    
+}
+
+@media screen and (min-width: 700px) {
+    .nav-bar li.icons{
+        visibility: hidden;
+    }
+
+    /* .nav-bar li{
+        visibility: hidden;
+    } */
+
+    
+}
+
+@media screen and (max-width: 700px) {
+    .nav-bar li{
+        visibility: hidden;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .nav-bar li.icons{
+        visibility: visible;
+        position: relative;
+        color: #000;
+        font-size: 25px;
+        
+        
+    }
+
+    .nav-bar li.icons:nth-child(1){
+        margin-left: -50px;
+    }
+
+
+    .nav-bar ul{
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .nav-bar ul{
+        
+    }
+
+    
+}

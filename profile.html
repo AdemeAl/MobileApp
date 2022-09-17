@@ -9,6 +9,7 @@
 
     <link rel="manifest" href="/manifest.webmanifest">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,20 +22,38 @@
 <body>
 
     <header>
-        <a href="index.html"><h1>ADM</h1></a>
+        <a href="index.html">
+            <h1>ADM</h1>
+        </a>
         <a href="profile.html"><i class="fa-solid fa-user"></i></a>
     </header>
 
-    <!-- <form action="login.php">
-        <h2>Login</h2>
+    <div class="nav-bar">
+        <h1>ADM</h1>
+        <ul>
+            <a href="search.html">
+                <li>Search</li>
+            </a>
+            <li>WatchList</li>
+            <a href="profile.html">
+                <li>Profile</li>
+            </a>
+            <li>
+                <ion-icon id="icon" onclick="toogle()" name="moon-outline"></ion-icon>
+            </li>
+        </ul>
 
-        <label for="username">username</label>
-        <input type="text" name="username" placeholder="username">
+    </div>
+     <!-- <form action="login.php">
+    <h2>Login</h2>
 
-        <label for="password">password</label>
-        <input type="text" name="password" placeholder="password">
+    <label for="username">username</label>
+    <input type="text" name="username" placeholder="username">
 
-        <button type="submit"></button>
+    <label for="password">password</label>
+    <input type="text" name="password" placeholder="password">
+
+    <button type="submit"></button>
 
     </form> -->
 
