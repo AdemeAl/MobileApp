@@ -129,7 +129,7 @@
         
     }
     header{
-        visibility: hidden;
+        visibility: hidden; 
     }
 
     .nav-bar li.icons:nth-child(1){
