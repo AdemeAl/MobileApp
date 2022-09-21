@@ -40,6 +40,7 @@ body {
     background-color: #16161a;
     font-family: "Poppins", sans-serif;
     margin: 0;
+    padding: 0;
 }
 
 header {
@@ -68,6 +69,7 @@ header {
 .search:focus {
     background: #fff;
     outline: none;
+    color: #000;
 }
 
 .search:focus.search::placeholder{
@@ -284,5 +286,25 @@ main {
     .movie{
         width: 200px;
         height: 250px;
+       
     }
+
+    .search{
+        visibility: visible;
+    }
+
+    .head{
+        visibility: visible;
+    }
+}
+
+
+@media  screen and (max-width: 430px){
+    .movie{
+        margin: 1em;
+        width: 170px;
+        height: 200px;
+    }
+
+    
 }
