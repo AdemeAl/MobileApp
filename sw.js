@@ -1,4 +1,5 @@
 const PREFIX = "v1";
+
 self.addEventListener("install", (event) => {
     self.skipWaiting();
     event.waitUntil(
@@ -27,7 +28,7 @@ self.addEventListener("fetch", (event) => {
 
 
                 } catch (e) {
-                    console.log(PREFIX);
+                    return new Response("Bonjour");
                 }
             })()
         );
