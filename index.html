@@ -34,23 +34,31 @@
         })
     </script> -->
 
+    <script type="text/javascript">
+
+        if (!navigator.onLine) {
+            window.location.href = 'offline.html'
+        } else {
+            // if resource is not cached by sw.js
+            // fetch('offline.html').then(x => console.log('got offline', x))
+        }
+
+        window.addEventListener("offline", function () {
+
+            window.location.href = 'offline.html'
+
+        }, false);
+
+    </script>
     <script>
-        // Check if browser supports service workers
-        if (navigator.serviceWorker) {
-            console.log("Service Worker Supported");
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' })
+                .then(function (registration) {
+                    console.log('Service Worker Registered');
+                });
 
-            // Start registration process on page load
-            window.addEventListener("load", () => {
-                navigator.serviceWorker
-
-                    // The register function takes as argument
-                    // the file path to the worker's file
-                    .register("/sw.js")
-
-                    // Gives us registration object
-                    .then(reg => console.log("Service Worker Registered"))
-                    .catch(swErr => console.log(
-                        `Service Worker Error: ${swErr}}`));
+            navigator.serviceWorker.ready.then(function (registration) {
+                console.log('Service Worker Ready');
             });
         }
     </script>
