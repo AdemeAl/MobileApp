@@ -57,7 +57,7 @@ const CACHE_NAME = 'offline';
 // Customize this with a different URL if needed.
 const OFFLINE_URL = 'offline.html';
 
-const CACHE_FILE = '/style.css';
+const CACHE_FILE = ["/style.css", "/responsive.css"];
 
 self.addEventListener('install', (event) => {
     event.waitUntil((async () => {
