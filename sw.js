@@ -1,3 +1,16 @@
+const PREFIX = "v1";
+self.addEventListener("install", (event) => {
+    self.skipWaiting();
+    event.waitUntil(
+        (async () => {
+            const cache = await caches.open(PREFIX);
+            cache.add(new Request("/offline"))
+        })
+    )
+})
+
+
+
 self.addEventListener("fetch", (event) => {
     console.log(`Fetching: ${event.request.url} , Mode: ${event.request.mode}`);
 
@@ -14,7 +27,7 @@ self.addEventListener("fetch", (event) => {
 
 
                 } catch (e) {
-                    return new Response("Bonjour les gars");
+                    console.log(PREFIX);
                 }
             })()
         );
