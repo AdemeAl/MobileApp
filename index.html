@@ -38,19 +38,19 @@
         // Check if browser supports service workers
         if (navigator.serviceWorker) {
             console.log("Service Worker Supported");
-            
+
             // Start registration process on page load
             window.addEventListener("load", () => {
                 navigator.serviceWorker
-                                      
+
                     // The register function takes as argument
                     // the file path to the worker's file
-                    .register("./service_worker.js")
-              
+                    .register("/sw.js")
+
                     // Gives us registration object
                     .then(reg => console.log("Service Worker Registered"))
                     .catch(swErr => console.log(
-                      `Service Worker Error: ${swErr}}`));
+                        `Service Worker Error: ${swErr}}`));
             });
         }
     </script>
