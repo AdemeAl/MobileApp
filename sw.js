@@ -59,7 +59,7 @@ const OFFLINE_URL = 'offline.html';
 
 const CACHE_FILE1 = 'style.css';
 
-const CACHE_FILE2 = 'responsive.css';
+const CACHE_FILE2 = 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT';
 
 self.addEventListener('install', (event) => {
     event.waitUntil((async () => {
