@@ -21,7 +21,18 @@
     <!-- Css links -->
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="style.css">
-    
+
+
+
+    <!-- Service workers -->
+
+    <script>
+        window.addEventListener('load', () => {
+            if( "serviceWorker" in navigator) {
+                navigator.serviceWorker.register('/sw.js')
+            }
+        })
+    </script>
 
     <title>ADM App</title>
 </head>
@@ -31,7 +42,7 @@
         <h1>ADM</h1>
         <a href="profile.html"><i style="visibility: hidden;" class="fa-solid fa-user"></i></a>
     </header>
-    
+
 
     <div class="nav-bar">
         <h1>ADM</h1>
@@ -48,10 +59,20 @@
                 <ion-icon id="icon" onclick="toogle()" name="moon-outline"></ion-icon>
             </li>
 
-            <li class="icons"><a href="search.html"><ion-icon name="search-outline"></a></ion-icon></li>
-            <li class="icons"><ion-icon name="bookmark-outline"></ion-icon></li>
-            <li class="icons"><ion-icon onclick="toogle()" name="moon-outline"></ion-icon></li>
-            <li class="icons"><a href="profile.html"><ion-icon name="person-circle-outline"></a></ion-icon></li>
+            <li class="icons"><a href="search.html">
+                    <ion-icon name="search-outline">
+                </a></ion-icon>
+            </li>
+            <li class="icons">
+                <ion-icon name="bookmark-outline"></ion-icon>
+            </li>
+            <li class="icons">
+                <ion-icon onclick="toogle()" name="moon-outline"></ion-icon>
+            </li>
+            <li class="icons"><a href="profile.html">
+                    <ion-icon name="person-circle-outline">
+                </a></ion-icon>
+            </li>
         </ul>
 
     </div>
@@ -105,7 +126,7 @@
                 <a href="#"><img src="assets/affiche/manifest.jpg" alt=""></a>
             </div>
 
-            
+
 
         </div>
 
