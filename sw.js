@@ -75,7 +75,7 @@ self.addEventListener('install', (event) => {
         const cache = await caches.open(CACHE_NAME);
         // Setting {cache: 'reload'} in the new request will ensure that the response
         // isn't fulfilled from the HTTP cache; i.e., it will be from the network.
-        await cache.add(new Request(CACHE_FILE, { cache: 'reload' }));
+        await cache.add(new Request(CACHE_FILE1, { cache: 'reload' }));
     })());
 });
 
@@ -84,7 +84,7 @@ self.addEventListener('install', (event) => {
         const cache = await caches.open(CACHE_NAME);
         // Setting {cache: 'reload'} in the new request will ensure that the response
         // isn't fulfilled from the HTTP cache; i.e., it will be from the network.
-        await cache.add(new Request(CACHE_FILE1, { cache: 'reload' }));
+        await cache.add(new Request(CACHE_FILE2, { cache: 'reload' }));
     })());
 });
 
