@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADM</title>
 </head>
-<body>
-    <h1>You looks Not connected</h1>
 
-    <img src="/assets/affiche/offline.png" alt="">
+<body>
+    <div class="nav-bar">
+        <h1>ADM</h1>
+        <ul>
+            <a href="search.html">
+                <li>Search</li>
+            </a>
+            <li>WatchList</li>
+            <a href="profile.html">
+                <li>Profile</li>
+            </a>
+
+            <li>
+                <ion-icon id="icon" onclick="toogle()" name="moon-outline"></ion-icon>
+            </li>
+
+            <li class="icons"><a href="search.html">
+                    <ion-icon name="search-outline">
+                </a></ion-icon>
+            </li>
+            <li class="icons">
+                <ion-icon name="bookmark-outline"></ion-icon>
+            </li>
+            <li class="icons">
+                <ion-icon onclick="toogle()" name="moon-outline"></ion-icon>
+            </li>
+            <li class="icons"><a href="profile.html">
+                    <ion-icon name="person-circle-outline">
+                </a></ion-icon>
+            </li>
+        </ul>
+
+    </div>
 </body>
+
 </html>
